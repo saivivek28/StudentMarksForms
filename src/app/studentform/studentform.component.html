@@ -1,0 +1,15 @@
+<h1>Student Form</h1>
+<label>Name of the student</label><br />
+<input type="text" [(ngModel)]="studentName"/><br /><br />
+
+<label>Subject</label><br />
+<input type="text" [(ngModel)]="subject" /><br /><br />
+
+<label>Test score 1</label><br />
+<input type="number" [(ngModel)]="testScore1" /><br /><br />
+
+<label>Test score 2</label><br />
+<input type="number" [(ngModel)]="testScore2" />
+<button (click)="submitForm()">Submit</button>
+
+<p *ngIf="message">{{ message }}</p>
