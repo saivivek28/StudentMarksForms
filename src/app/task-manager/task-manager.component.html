@@ -1,0 +1,16 @@
+<h1>SMART TASK MANAGER</h1>
+<div class="task-manager">
+  
+<input type="text" placeholder="Name of the task" [(ngModel)]="taskname" />
+<select [(ngModel)]="priority">
+  <option>High</option>
+  <option>Medium</option>
+  <option>Low</option>
+
+</select>
+</div>
+<button (click)="addTask()">Add Task</button>
+
+<app-task-list
+  [taskList]="tasks"
+  (completetask) = "markAsComplete($event)"></app-task-list>

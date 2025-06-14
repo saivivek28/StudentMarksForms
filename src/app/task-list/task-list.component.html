@@ -1,0 +1,11 @@
+<p *ngIf = taskList.length === 0>
+    No tasks available.
+</p>
+<ul *ngIf="taskList.length > 0">
+    <li *ngFor="let task of taskList; index as i" >
+        {{ task.name }} - {{ getPriorityBadge(task.priority) }}
+        | Status: {{ task.completed ? ' ✅Completed' : ' ⌛Pending' }}
+
+        <button *ngIf = "!task.completed" (click) = "completetask.emit(i)">Mark as Complete</button>
+    </li>
+</ul>
