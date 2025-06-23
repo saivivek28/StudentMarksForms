@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { products } from './product.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
-  imports: [],
+  imports: [ CommonModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
+
+  constructor(){
+    localStorage.getItem("name");
+  }
 products:products[] = [
     {
       "id": 1,

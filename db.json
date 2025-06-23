@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "name": "N.saivivek",
+      "RollNo": "A0418",
+      "age": 19
+    },
+    {
+      "name": "yash",
+      "RollNo": "A0484",
+      "age": 19
+    },
+    {
+      "id": "455b",
+      "name": "uyguty",
+      "age": 66,
+      "RollNo": "tuyuyg"
+    }
+  ],
+  "Teacher": [
+    {
+      "name": "Sunil",
+      "Roll No": "T0012"
+    }
+  ]
+}

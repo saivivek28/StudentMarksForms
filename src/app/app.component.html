@@ -1,6 +1,112 @@
 <!-- <app-studashboard></app-studashboard> -->
+
+
 <!-- <app-studentform></app-studentform> -->
+
+
  <!-- <app-studashboard></app-studashboard> -->
-  <app-task-manager></app-task-manager>
-  <app-task-list></app-task-list>
-  <!-- <app-products></app-products> -->
+
+
+  <!-- <app-task-manager></app-task-manager>
+  <app-task-list></app-task-list> -->
+
+
+  <!-- <app-products></app-products>
+  <app-product-cart></app-product-cart> -->
+
+
+
+  <!-- <app-minicart></app-minicart> -->
+
+<!-- 
+hands on class
+   <h1>{{ 2+2 }}</h1>
+<h1>{{ title }}</h1>
+<h1>{{ Hello() }}</h1>
+
+
+<h1>property binding</h1>
+<input [type]="ton" placeholder="Enter title" />
+
+<h1>Event Binding</h1>
+<button (click) = "sendData('msg')">Click</button>
+
+<h1>Two way Data Binding</h1>
+<input [(ngModel)]="head" placeholder="Enter title" />
+
+<h2>Input value = {{ head }}</h2>
+
+
+<input type="text" [(ngModel)]  = "input" />
+
+
+<input [type]="input"  placeholder="Enter title" />
+
+<h1>Template reference variable</h1>
+
+<p #para> Using TRV</p>
+<button (click)="changeText()">Change text</button> 
+
+
+<h1>Structral Directives</h1>
+@if (10 < 5 ){
+    
+<div><h1>Minor</h1></div>
+}
+@else{
+    <div>Major</div>
+}
+<ol>
+    <li *ngFor="let item of list">{{ item }}</li>
+</ol>
+
+
+<h1>NgSwtch</h1>
+<select [(ngModel)] = "color">
+  <option value = 'red'>red</option>
+  <option value = 'orange'>orange</option>
+  <option value = 'green'>green</option>
+  <option value = 'black'>black</option>
+  <option value = 'yellow'>yellow</option>
+</select>
+<div [ngSwitch] = "color">
+ <h1 style = "color:red;" *ngSwitchCase = "'red'">Selected:red</h1>
+  <h1 style = "color:orange;" *ngSwitchCase = "'orange'">Selected:orange</h1>
+   <h1 style = "color:green;" *ngSwitchCase = "'green'">Selected:green</h1>
+    <h1 style = "color:black;" *ngSwitchCase = "'black'">Selected:black</h1>
+     <h1 style = "color:yellow" *ngSwitchCase = "'yellow'">Selected:yellow</h1>
+     <h1 style = "color:gray;" *ngSwitchDefault>Selecte a color</h1>
+     </div>
+
+     <button class = "btn btn-primary">Test button</button>
+
+     <h1 [ngStyle] = "{'family': family}">Ng Style</h1>
+
+     <div appApp >
+      <p appApp>Custom Directive para</p>
+      <h1 appApp>
+         Custom Directive head
+      </h1>
+     </div> 
+
+     <div appApp backgroundcolor = "red" ></div>
+     <div appApp backgroundcolor = "blue" ></div>
+     <div  appApp backgroundcolor = "orange" ></div>
+
+      -->
+      <!-- <app-parent></app-parent> -->
+
+      <!-- <h1>{{myMessage}}</h1>
+
+      <p #para> Using TRV</p>
+<button (click)="changeText()">Change text</button>
+
+<h1>{{data}}</h1> -->
+<!-- 
+
+<app-assignment></app-assignment> -->
+
+<input type = "text" placeholder="name" [(ngModel)] = "Name"/>
+<input type = "type" placeholder="Roll no" [(ngModel)] = "Rollno"/>
+<input type = "number" placeholder="age" [(ngModel)] = "Age"/>
+<button (click) = "savedata()">Submit</button>

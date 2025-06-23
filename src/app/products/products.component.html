@@ -1,5 +1,6 @@
 <div class="products">
- <h1 class = "head">Echo Sphere</h1>   
+
+ <h1 class = "head">S Mart</h1>   
 <input type = "text" class = "input" placeholder="search for products"/>
 
 <select class = "filter">
@@ -10,3 +11,9 @@
 </select>
 <button class = "button">My Cart</button>
 </div>
+<div *ngFor = "let product of products" class = "product">
+    <img [src] = "product.images" alt = "{{product.title}}" class = "image"/>
+    <h2 class = "name">{{product.title}}</h2>
+    <p class = "price">${{product.price}}</p>
+    <p class = "description">{{product.description}}</p>
+    <button class = "add-to-cart">Add to Cart</button></div>

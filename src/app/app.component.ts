@@ -1,22 +1,68 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule} from '@angular/common';
+import { Component, ElementRef, ViewChild , OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { StudashboardComponent } from './studashboard/studashboard.component';
-import { StudentformComponent } from './studentform/studentform.component';
-import { TaskManagerComponent } from './task-manager/task-manager.component';
-import { TaskListComponent } from './task-list/task-list.component';
-import { ProductsComponent } from './products/products.component';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { request } from 'http';
 
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, FormsModule,StudentformComponent, StudashboardComponent,TaskManagerComponent,TaskListComponent,ProductsComponent],
+  imports: [FormsModule, CommonModule,HttpClientModule],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title(title: any) {
-    throw new Error('Method not implemented.');
+Name:string = "";
+Rollno :string = "";
+Age : number = 0;
+  constructor(private httpClient: HttpClient) {
+    httpClient.get('http://localhost:3000/students').subscribe(
+      (res) => {
+        console.log(res)
+      })
+    }
+savedata(){
+  let request = {
+    name:this.Name,
+    age:this.Age,
+    RollNo:this.Rollno
+
   }
+     this.httpClient.post('http://localhost:3000/students', request).subscribe((res) =>{
+      console.log(res);
+    })
+  
 }
+  }
+//   data: string[] = [];
+//   input: string = '';
+
+  
+//   Hello() {
+//     return 'Hello from Ts!';
+//   }
+//   ton = "radio";
+//   sendData(data: any) {
+//     alert('Data sent: ' + data);
+//   }
+//   head: string = '';
+
+//   @ViewChild('para') para!: ElementRef;
+
+//   changeText() {
+//     this.para.nativeElement.innerText = 'Text changed!';
+//     console.log(this.para);
+//   }
+//   age: number = 20;
+//   list: string[] = ['Angular', 'React', 'Vue'];
+
+//   color:string = "";
+//   family:string = "";
+
+//   myMessage:string = "";
+//   ngOnInit(): void {
+// this.myMessage = "Hello Message";
+
+//   }
+  
